@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hardy.modelrepository.dao.mapper.GroupMapper">
+
+    <resultMap id="BaseResultMap" type="com.hardy.modelrepository.dao.pojo.Group">
+            <id property="groupId" column="group_id" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="organizationId" column="organization_id" jdbcType="BIGINT"/>
+            <result property="creator" column="creator" jdbcType="VARCHAR"/>
+            <result property="gmtCreate" column="gmt_create" jdbcType="TIMESTAMP"/>
+            <result property="gmtModified" column="gmt_modified" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        group_id,name,description,
+        organization_id,creator,gmt_create,
+        gmt_modified
+    </sql>
+</mapper>

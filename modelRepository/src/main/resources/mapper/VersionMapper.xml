@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hardy.modelrepository.dao.mapper.VersionMapper">
+
+    <resultMap id="BaseResultMap" type="com.hardy.modelrepository.dao.pojo.Version">
+            <id property="versionId" column="version_id" jdbcType="BIGINT"/>
+            <result property="groupId" column="group_id" jdbcType="BIGINT"/>
+            <result property="artifactId" column="artifact_id" jdbcType="BIGINT"/>
+            <result property="artifactName" column="artifact_name" jdbcType="VARCHAR"/>
+            <result property="uuid" column="uuid" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="VARCHAR"/>
+            <result property="sha256" column="sha256" jdbcType="VARCHAR"/>
+            <result property="uri" column="uri" jdbcType="VARCHAR"/>
+            <result property="creator" column="creator" jdbcType="VARCHAR"/>
+            <result property="gmtCreate" column="gmt_create" jdbcType="TIMESTAMP"/>
+            <result property="gmtModified" column="gmt_modified" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        version_id,group_id,artifact_id,
+        artifact_name,uuid,status,
+        sha256,uri,creator,
+        gmt_create,gmt_modified
+    </sql>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hardy.modelrepository.dao.mapper.FileMapper">
+
+    <resultMap id="BaseResultMap" type="com.hardy.modelrepository.dao.pojo.File">
+            <id property="fileId" column="file_id" jdbcType="BIGINT"/>
+            <result property="versionId" column="version_id" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="sha256" column="sha256" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        file_id,version_id,name,
+        sha256
+    </sql>
+</mapper>

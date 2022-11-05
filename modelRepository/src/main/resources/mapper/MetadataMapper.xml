@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hardy.modelrepository.dao.mapper.MetadataMapper">
+
+    <resultMap id="BaseResultMap" type="com.hardy.modelrepository.dao.pojo.Metadata">
+            <id property="metaId" column="meta_id" jdbcType="BIGINT"/>
+            <result property="versionId" column="version_id" jdbcType="BIGINT"/>
+            <result property="metaKey" column="meta_key" jdbcType="VARCHAR"/>
+            <result property="metaValue" column="meta_value" jdbcType="VARCHAR"/>
+            <result property="creator" column="creator" jdbcType="VARCHAR"/>
+            <result property="gmtCreate" column="gmt_create" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        meta_id,version_id,meta_key,
+        meta_value,creator,gmt_create
+    </sql>
+</mapper>
